@@ -14,6 +14,7 @@ type Config struct {
 		Login         string `yaml:"login"`
 		Password      string `yaml:"password"`
 		ZabbixRootURL string `yaml:"zabbix_root_url"`
+		SendReportsTo string `yaml:"send_reports_to"`
 	} `yaml:"zrbot"`
 	Reportlinks struct {
 		Daily  string `yaml:"daily"`

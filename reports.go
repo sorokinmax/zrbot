@@ -41,7 +41,7 @@ func dailyReport() {
 		log.Fatal(err)
 	}
 
-	SendMail(cfg.SMTP.Host, cfg.SMTP.Port, cfg.SMTP.User, cfg.SMTP.Pass, cfg.SMTP.From, "admin@company.com", "", "Zabbix daily report", "", "./dailyReport.pdf")
+	SendMail(cfg.SMTP.Host, cfg.SMTP.Port, cfg.SMTP.User, cfg.SMTP.Pass, cfg.SMTP.From, cfg.Zrbot.SendReportsTo, "", "Zabbix daily report", "", "./dailyReport.pdf")
 }
 
 func weeklyReport() {
@@ -74,7 +74,7 @@ func weeklyReport() {
 		log.Fatal(err)
 	}
 
-	SendMail(cfg.SMTP.Host, cfg.SMTP.Port, cfg.SMTP.User, cfg.SMTP.Pass, cfg.SMTP.From, "admin@company.com", "", "Zabbix weekly report", "", "./weeklyReport.pdf")
+	SendMail(cfg.SMTP.Host, cfg.SMTP.Port, cfg.SMTP.User, cfg.SMTP.Pass, cfg.SMTP.From, cfg.Zrbot.SendReportsTo, "", "Zabbix weekly report", "", "./weeklyReport.pdf")
 }
 
 // print a specific pdf page.
