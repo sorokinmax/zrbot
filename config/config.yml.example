@@ -1,0 +1,15 @@
+zrbot:
+  login: "Admin"
+  password: "123123123213213"
+  zabbix_root_url: "http://10.0.0.1"
+
+reportlinks:
+  daily: "http://10.0.0.1/zabbix.php?action=dashboard.print&dashboardid=123&from=2022-10-19%2000%3A00%3A00&to=2022-10-20%2000%3A00%3A00"
+  weekly: "http://10.0.0.1/zabbix.php?action=dashboard.print&dashboardid=123&from=2022-10-19%2000%3A00%3A00&to=2022-10-20%2000%3A00%3A00"
+
+smtp:
+  host: "smtp.office365.com"
+  port: 587
+  user: "notify@company.com"
+  pass: "PASS"
+  from: "notify@company.com"
