@@ -13,7 +13,8 @@ RUN GOOS=linux go build -o /zrbot .
 ## Final image stage
 ##
 FROM alpine:3.16
-WORKDIR /
+WORKDIR /zrbot
+RUN mkdir config
 COPY --from=builder /zrbot /zrbot
 
-ENTRYPOINT ["/zrbot"]
+ENTRYPOINT ["/zrbot/zrbot"]
