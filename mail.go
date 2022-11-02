@@ -27,7 +27,7 @@ func SendMail(host string, port int, user string, password string, from string, 
 	m := gomail.NewMessage()
 	m.SetHeader("From", from)
 	m.SetHeader("To", to)
-	m.SetHeader("Cc", cc)
+	//m.SetHeader("Cc", cc)
 	m.SetHeader("Subject", subject)
 	m.SetBody("text/html", body)
 	if attach != "" {
